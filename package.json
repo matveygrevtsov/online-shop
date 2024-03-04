@@ -1,10 +1,13 @@
 {
+  "homepage": "https://matveygrevtsov.github.io/online-shop/",
   "name": "online-shop",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack server"
+    "start": "npx webpack server",
+    "predeploy": "npx webpack",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
