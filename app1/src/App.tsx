@@ -1,16 +1,26 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 
 import { Divider } from "antd";
 import { SignUpForm } from "./components/SignUpForm";
 import { SignInForm } from "./components/SignInForm";
 import { ProductCard } from "./components/ProductCard";
 import { ProductsList } from "./components/ProductsList";
-import { Header } from "./components/Header";
 import { Cart } from "./components/Cart";
+
+const RemoteHeader = lazy(() => {
+  // @ts-ignore
+  return import("app2/Header").then((response) => {
+    console.log(response);
+    return response;
+  });
+});
 
 export const App = (): JSX.Element => (
   <>
-    <Header />
+    <Suspense>
+      <RemoteHeader />
+    </Suspense>
+
     <Divider />
 
     <center>
