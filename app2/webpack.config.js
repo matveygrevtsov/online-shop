@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { ModuleFederationPlugin } = require("webpack").container;
+const deps = require("./package.json").dependencies;
 
 module.exports = {
   mode: "development",
@@ -37,12 +39,21 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new ModuleFederationPlugin({
+      name: "app2",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./Header": "./src/components/Header",
+        "./App": "./src/App",
+      },
+      // shared: ["antd"],
+    }),
   ],
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
     },
-    port: "3000",
+    port: 3001,
     historyApiFallback: true,
     compress: true,
   },
