@@ -7,13 +7,8 @@ import { ProductCard } from "./components/ProductCard";
 import { ProductsList } from "./components/ProductsList";
 import { Cart } from "./components/Cart";
 
-const RemoteHeader = lazy(() => {
-  // @ts-ignore
-  return import("app2/Header").then((response) => {
-    console.log(response);
-    return response;
-  });
-});
+// @ts-ignore
+const RemoteHeader = lazy(() => import("app2/Header"));
 
 export const App = (): JSX.Element => (
   <>
