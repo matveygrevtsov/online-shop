@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "lerna run --parallel start"
+    "start": "concurrently --kill-others \"npm start --prefix ./app2\" \"npm start --prefix ./app1\"",
+    "start-lerna": "lerna run --parallel start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "lerna": "^8.1.2"
   },
   "workspaces": {
