@@ -7,23 +7,8 @@ import { ProductCard } from "./components/ProductCard";
 import { ProductsList } from "./components/ProductsList";
 import { Cart } from "./components/Cart";
 
-const RemoteHeader = lazy(() =>
-  // @ts-ignore
-  import("app2/Header").catch((error) => {
-    return {
-      default: () => (
-        <div
-          style={{
-            textAlign: "center",
-            color: "red",
-          }}
-        >
-          Не удалось загрузить компонент: {JSON.stringify(error)}
-        </div>
-      ),
-    };
-  })
-);
+// @ts-ignore
+const RemoteHeader = lazy(() => import("app2/Header"));
 
 export const App = (): JSX.Element => (
   <>
