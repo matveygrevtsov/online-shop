@@ -44,9 +44,22 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./Header": "./src/components/Header",
-        "./App": "./src/App",
       },
-      // shared: ["antd"],
+      shared: {
+        ...deps,
+        react: {
+          singleton: true,
+          requiredVersion: deps.react,
+        },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: deps["react-dom"],
+        },
+        antd: {
+          singleton: true,
+          requiredVersion: deps.antd,
+        },
+      }
     }),
   ],
   devServer: {

@@ -44,7 +44,21 @@ module.exports = {
       remotes: {
         app2: "app2@http://localhost:3001/remoteEntry.js",
       },
-      // shared: ["antd"],
+      shared: {
+        ...deps,
+        react: {
+          singleton: true,
+          requiredVersion: deps.react,
+        },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: deps["react-dom"],
+        },
+        antd: {
+          singleton: true,
+          requiredVersion: deps.antd,
+        },
+      }
     }),
   ],
   devServer: {
