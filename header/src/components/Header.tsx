@@ -46,14 +46,12 @@ const Header = () => {
   }, []);
 
   return (
-    <div style={{ marginBottom: "16px" }}>
-      <Menu
-        onClick={console.log}
-        selectedKeys={["main"]}
-        mode="horizontal"
-        items={items}
-      />
-    </div>
+    <Menu
+      onClick={console.log}
+      selectedKeys={["main"]}
+      mode="horizontal"
+      items={items}
+    />
   );
 };
 
