@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Avatar, Button, List } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 
@@ -9,7 +10,7 @@ interface IProduct {
   image: string;
 }
 
-const products: IProduct[] = [
+const mockProducts: IProduct[] = [
   {
     id: "0",
     description: "description",
@@ -68,12 +69,12 @@ const products: IProduct[] = [
   },
 ];
 
-export const Cart = () => {
+const Cart = () => {
   return (
     <List
       style={{ maxWidth: "600px" }}
       itemLayout="horizontal"
-      dataSource={products}
+      dataSource={mockProducts}
       renderItem={(product) => (
         <List.Item
           actions={[
@@ -90,3 +91,5 @@ export const Cart = () => {
     />
   );
 };
+
+export default Cart;

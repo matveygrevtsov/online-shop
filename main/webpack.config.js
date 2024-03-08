@@ -40,10 +40,10 @@ module.exports = {
       template: "./public/index.html",
     }),
     new ModuleFederationPlugin({
-      name: "app2",
-      filename: "remoteEntry.js",
-      exposes: {
-        "./Header": "./src/components/Header",
+      name: "main",
+      remotes: {
+        header: "header@http://localhost:3001/remoteEntry.js",
+        cart: "cart@http://localhost:3002/remoteEntry.js",
       },
       shared: {
         ...deps,
@@ -62,14 +62,14 @@ module.exports = {
           requiredVersion: deps.antd,
           eager: true,
         },
-      }
+      },
     }),
   ],
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
     },
-    port: 3001,
+    port: 3000,
     historyApiFallback: true,
     compress: true,
   },
