@@ -1,21 +1,15 @@
 import React, { FC } from "react";
 import { Card } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import { IProduct } from "../../../../types";
 
 const { Meta } = Card;
 
-interface IProduct {
-  id: string;
-  description: string;
-  price: number;
-  image: string;
-}
-
-interface IProps {
+interface ProductCardProps {
   product: IProduct;
 }
 
-export const ProductCard: FC<IProps> = ({ product }) => {
+export const ProductCard = ({ product }: ProductCardProps): JSX.Element => {
   const { description, price, image } = product;
 
   return (

@@ -57,6 +57,11 @@ module.exports = {
           requiredVersion: deps["react-dom"],
           eager: true,
         },
+        "react-router-dom": {
+          singleton: true,
+          requiredVersion: deps["react-router-dom"],
+          eager: true,
+        },
         antd: {
           singleton: true,
           requiredVersion: deps.antd,
