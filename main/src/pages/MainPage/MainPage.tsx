@@ -1,63 +1,8 @@
-import React, { Suspense } from "react";
-import { ProductsList } from "./components/ProductsList";
+import React from 'react';
 
-const mockProducts = [
-  {
-    id: "0",
-    description: "description",
-    price: 300,
-    image:
-      "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  },
-  {
-    id: "0",
-    description: "description",
-    price: 300,
-    image:
-      "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  },
-  {
-    id: "0",
-    description: "description",
-    price: 300,
-    image:
-      "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  },
-  {
-    id: "0",
-    description: "description",
-    price: 300,
-    image:
-      "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  },
-  {
-    id: "0",
-    description: "description",
-    price: 300,
-    image:
-      "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  },
-  {
-    id: "0",
-    description: "description",
-    price: 300,
-    image:
-      "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  },
-  {
-    id: "0",
-    description: "description",
-    price: 300,
-    image:
-      "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  },
-  {
-    id: "0",
-    description: "description",
-    price: 300,
-    image:
-      "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  },
-];
+import { ProductsList } from './components';
 
-export const MainPage = () => <ProductsList products={mockProducts} />;
+import { MOCK_PRODUCTIONS } from '../../constants';
+
+
+export const MainPage = () => <ProductsList products={MOCK_PRODUCTIONS} />;

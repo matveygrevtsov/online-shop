@@ -1,9 +1,8 @@
 import React from "react";
-
 import Header from "./components/Header";
 
 export const App = (): JSX.Element => (
   <>
-    <Header />
+    <Header logo="______" navigate={() => {console.log('click')}} />
   </>
 );

@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ExternalTemplateRemotesPlugin = require('external-remotes-plugin');
 const { ModuleFederationPlugin } = require("webpack").container;
 const deps = require("./package.json").dependencies;
 
@@ -42,7 +43,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "main",
       remotes: {
-        header: "header@http://localhost:3001/remoteEntry.js",
+        header: "header@[window.headerApp]/remoteEntry.js",
         cart: "cart@http://localhost:3002/remoteEntry.js",
       },
       shared: {
@@ -57,6 +58,11 @@ module.exports = {
           requiredVersion: deps["react-dom"],
           eager: true,
         },
+        "react-router-dom": {
+          singleton: true,
+          requiredVersion: deps["react-router-dom"],
+          eager: true,
+        },
         antd: {
           singleton: true,
           requiredVersion: deps.antd,
@@ -64,6 +70,7 @@ module.exports = {
         },
       },
     }),
+    new ExternalTemplateRemotesPlugin(),
   ],
   devServer: {
     static: {
