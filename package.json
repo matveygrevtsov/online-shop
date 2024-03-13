@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm start --prefix ./app2\" \"npm start --prefix ./app1\"",
+    "start": "concurrently --kill-others \"npm start --prefix ./main\" \"npm start --prefix ./header\" \"npm start --prefix ./cart\"",
     "start-lerna": "lerna run --parallel start"
   },
   "keywords": [],
@@ -16,8 +16,9 @@
   },
   "workspaces": {
     "packages": [
-      "app1",
-      "app2"
+      "main",
+      "header",
+      "cart"
     ]
   }
 }
