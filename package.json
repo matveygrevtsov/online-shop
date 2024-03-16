@@ -4,21 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm start --prefix ./main\" \"npm start --prefix ./header\" \"npm start --prefix ./cart\"",
-    "start-lerna": "lerna run --parallel start"
+    "start": "concurrently --kill-others \"npm start --prefix ./main\" \"npm start --prefix ./header\" \"npm start --prefix ./cart\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "lerna": "^8.1.2"
-  },
-  "workspaces": {
-    "packages": [
-      "main",
-      "header",
-      "cart"
-    ]
+    "webpack-cli": "^5.1.4"
   }
 }
