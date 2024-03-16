@@ -42,7 +42,7 @@ export const SignInForm = ({ onSubmit }: SignInFormProps): JSX.Element => {
       {...formItemLayout}
       form={form}
       onFinish={onSubmit}
-      style={{ maxWidth: "600px" }}
+      style={{ maxWidth: "600px", width: "100%" }}
     >
       <Form.Item
         name="email"

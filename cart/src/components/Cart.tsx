@@ -10,7 +10,7 @@ const Cart = () => {
     <>
       <Link to="/">Вернуться</Link>
       <List
-        style={{ maxWidth: "600px" }}
+        style={{ maxWidth: "600px", width: "100%" }}
         itemLayout="horizontal"
         dataSource={MOCK_PRODUCTS}
         renderItem={(product) => (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "antd";
+import { Flex } from "antd";
 import { ProductCard } from "../ProductCard/ProductCard";
 import { Product } from "../../../../types";
 
@@ -9,12 +9,18 @@ interface ProductsListProps {
 
 export const ProductsList = ({ products }: ProductsListProps): JSX.Element => {
   return (
-    <Row gutter={[16, 16]}>
+    <Flex
+      gap={16}
+      wrap="wrap"
+      justify="center"
+      style={{
+        maxWidth: "932px",
+        width: "100%",
+      }}
+    >
       {products.map((product) => (
-        <Col key={product.id} xs={24} sm={12} xl={8}>
-          <ProductCard product={product} />
-        </Col>
+        <ProductCard product={product} />
       ))}
-    </Row>
+    </Flex>
   );
 };
