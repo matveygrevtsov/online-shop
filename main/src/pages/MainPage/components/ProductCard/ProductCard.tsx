@@ -14,7 +14,7 @@ export const ProductCard = ({ product }: ProductCardProps): JSX.Element => {
 
   return (
     <Card
-      style={{ maxWidth: "300px" }}
+      style={{ maxWidth: "300px", width: "100%" }}
       cover={<img alt="example" src={image} />}
       actions={[<ShoppingCartOutlined />]} // Если идёт загрузка, отображать <Spin size="small" />
     >
