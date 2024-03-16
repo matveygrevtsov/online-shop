@@ -36,14 +36,4 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
       </Footer>
     </AntdLayout>
   );
-
-  // return (
-  //   <div>
-  //     <Suspense>
-  //       <RemoteHeader logo="ZAR_TEAM" navigate={navigate} />
-  //     </Suspense>
-
-  //     <center style={{ marginTop: "16px" }}>{children}</center>
-  //   </div>
-  // );
 };
