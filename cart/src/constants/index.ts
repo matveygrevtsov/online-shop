@@ -1,57 +1,57 @@
 import { Product } from "../types";
 
-export const MOCK_PRODUCTIONS: Product[] = [
+export const MOCK_PRODUCTS: Product[] = [
   {
-    id: 1,
+    id: "0",
     description: "description",
     price: 300,
     image:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
   },
   {
-    id: 2,
+    id: "0",
     description: "description",
     price: 300,
     image:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
   },
   {
-    id: 3,
+    id: "0",
     description: "description",
     price: 300,
     image:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
   },
   {
-    id: 4,
+    id: "0",
     description: "description",
     price: 300,
     image:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
   },
   {
-    id: 5,
+    id: "0",
     description: "description",
     price: 300,
     image:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
   },
   {
-    id: 6,
+    id: "0",
     description: "description",
     price: 300,
     image:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
   },
   {
-    id: 7,
+    id: "0",
     description: "description",
     price: 300,
     image:
       "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
   },
   {
-    id: 8,
+    id: "0",
     description: "description",
     price: 300,
     image:
