@@ -1,13 +1,13 @@
 import React from "react";
 import { Col, Row } from "antd";
 import { ProductCard } from "../ProductCard/ProductCard";
-import { IProduct } from "../../../../types";
+import { Product } from "../../../../types";
 
-interface IProps {
-  products: IProduct[];
+interface ProductsListProps {
+  products: Product[];
 }
 
-export const ProductsList = ({ products }: IProps): JSX.Element => {
+export const ProductsList = ({ products }: ProductsListProps): JSX.Element => {
   return (
     <Row gutter={[16, 16]}>
       {products.map((product) => (
