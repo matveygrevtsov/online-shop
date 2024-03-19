@@ -1,0 +1,9 @@
+[submodule "remoteHeader"]
+	path = remoteHeader
+	url = git@github.com:Severenit/header.git
+[submodule "remoteCart"]
+	path = remoteCart
+	url = git@github.com:Severenit/cart.git
+[submodule "remoteMain"]
+	path = remoteMain
+	url = git@github.com:Severenit/main.git
