@@ -1,0 +1,9 @@
+[submodule "online-shop-main"]
+	path = online-shop-main
+	url = https://github.com/matveygrevtsov/online-shop-main.git
+[submodule "online-shop-cart"]
+	path = online-shop-cart
+	url = https://github.com/matveygrevtsov/online-shop-cart
+[submodule "online-shop-header"]
+	path = online-shop-header
+	url = https://github.com/matveygrevtsov/online-shop-header
