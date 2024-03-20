@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "git submodule update --recursive --remote && npm --prefix ./online-shop-cart install && npm --prefix ./online-shop-header install && npm --prefix ./online-shop-main install",
+    "start": "concurrently --kill-others \"npm start --prefix ./main\" \"npm start --prefix ./header\" \"npm start --prefix ./cart\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
