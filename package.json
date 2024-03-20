@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm start --prefix ./main\" \"npm start --prefix ./header\" \"npm start --prefix ./cart\""
+    "start": "concurrently --kill-others \"npm start --prefix ./online-shop-main\" \"npm start --prefix ./online-shop-header\" \"npm start --prefix ./online-shop-cart\""
   },
   "keywords": [],
   "author": "",
