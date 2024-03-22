@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm start --prefix ./online-shop-main\" \"npm start --prefix ./online-shop-header\" \"npm start --prefix ./online-shop-cart\""
+    "start": "concurrently --kill-others \"npm start --prefix ./online-shop-main\" \"npm start --prefix ./online-shop-header\" \"npm start --prefix ./online-shop-cart\"",
+    "init": "node init.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@module-federation/native-federation-tests": "^0.3.0",
+    "@module-federation/native-federation-typescript": "^0.3.0",
     "concurrently": "^8.2.2"
   }
 }
